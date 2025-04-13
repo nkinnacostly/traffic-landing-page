@@ -14,7 +14,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
   return (
     <div
       className={cn(
-        "relative w-full max-w-[1200px] mx-auto rounded-xl overflow-hidden border",
+        "relative w-full mx-auto rounded-xl overflow-hidden border",
         isDark ? "bg-[#1a1a1a] border-gray-800" : "bg-white border-gray-200",
         className
       )}
@@ -22,18 +22,18 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
       {/* Header */}
       <div
         className={cn(
-          "h-12 flex items-center px-4 border-b",
+          "h-10 sm:h-12 flex items-center px-3 sm:px-4 border-b",
           isDark ? "border-gray-800" : "border-gray-200"
         )}
       >
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 rounded-full bg-[#FF5390]" />
-          <div className="w-3 h-3 rounded-full bg-[#F5B341]" />
-          <div className="w-3 h-3 rounded-full bg-[#68AF6B]" />
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FF5390]" />
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#F5B341]" />
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#68AF6B]" />
         </div>
         <div
           className={cn(
-            "mx-auto text-sm font-medium",
+            "mx-auto text-xs sm:text-sm font-medium",
             isDark ? "text-gray-400" : "text-gray-500"
           )}
         >
@@ -42,11 +42,11 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
       </div>
 
       {/* Main Content */}
-      <div className="p-6">
+      <div className="p-3 sm:p-4 md:p-6">
         {/* Search Bar */}
         <div
           className={cn(
-            "h-12 rounded-lg mb-6 relative overflow-hidden",
+            "h-10 sm:h-12 rounded-lg mb-4 sm:mb-6 relative overflow-hidden",
             isDark ? "bg-gray-800" : "bg-gray-100"
           )}
         >
@@ -54,7 +54,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
         </div>
 
         {/* Featured Products */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
           {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
@@ -69,16 +69,16 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
               <div className="aspect-square relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF5390] via-[#F5B341] to-[#68AF6B] opacity-20" />
               </div>
-              <div className="p-4">
+              <div className="p-3 sm:p-4">
                 <div
                   className={cn(
-                    "h-4 w-3/4 rounded mb-2",
+                    "h-3 sm:h-4 w-3/4 rounded mb-2",
                     isDark ? "bg-gray-700" : "bg-gray-200"
                   )}
                 />
                 <div
                   className={cn(
-                    "h-4 w-1/2 rounded",
+                    "h-3 sm:h-4 w-1/2 rounded",
                     isDark ? "bg-gray-700" : "bg-gray-200"
                   )}
                 />
@@ -88,7 +88,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
         </div>
 
         {/* Categories */}
-        <div className="flex space-x-4 mb-6 overflow-x-auto pb-2">
+        <div className="flex space-x-2 sm:space-x-4 mb-4 sm:mb-6 overflow-x-auto pb-2 -mx-3 sm:-mx-4 md:-mx-6 px-3 sm:px-4 md:px-6">
           {["All", "Fashion", "Electronics", "Home", "Beauty"].map(
             (category, index) => {
               const colors = [
@@ -102,7 +102,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
                 <div
                   key={category}
                   className={cn(
-                    "px-4 py-2 rounded-full text-sm whitespace-nowrap relative overflow-hidden group",
+                    "px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm whitespace-nowrap relative overflow-hidden group flex-shrink-0",
                     isDark ? "bg-gray-800" : "bg-gray-100"
                   )}
                 >
@@ -119,7 +119,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <motion.div
               key={i}
@@ -134,16 +134,16 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
               <div className="aspect-square relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF5390] via-[#F5B341] to-[#68AF6B] opacity-20 group-hover:opacity-30 transition-opacity" />
               </div>
-              <div className="p-3">
+              <div className="p-2 sm:p-3">
                 <div
                   className={cn(
-                    "h-3 w-3/4 rounded mb-2",
+                    "h-2.5 sm:h-3 w-3/4 rounded mb-1.5 sm:mb-2",
                     isDark ? "bg-gray-700" : "bg-gray-200"
                   )}
                 />
                 <div
                   className={cn(
-                    "h-3 w-1/2 rounded",
+                    "h-2.5 sm:h-3 w-1/2 rounded",
                     isDark ? "bg-gray-700" : "bg-gray-200"
                   )}
                 />
@@ -156,7 +156,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
       {/* Bottom Navigation */}
       <div
         className={cn(
-          "h-16 border-t flex items-center justify-around px-4",
+          "h-14 sm:h-16 border-t flex items-center justify-around px-3 sm:px-4",
           isDark ? "border-gray-800" : "border-gray-200"
         )}
       >
@@ -178,7 +178,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
               <div className="relative">
                 <div
                   className={cn(
-                    "w-6 h-6 rounded-full mb-1 relative overflow-hidden",
+                    "w-5 h-5 sm:w-6 sm:h-6 rounded-full mb-0.5 sm:mb-1 relative overflow-hidden",
                     isDark ? "bg-gray-700" : "bg-gray-200"
                   )}
                 >
@@ -189,7 +189,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
                   />
                 </div>
               </div>
-              <span className="text-xs">{item}</span>
+              <span className="text-[10px] sm:text-xs">{item}</span>
             </div>
           );
         })}
