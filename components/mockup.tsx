@@ -14,7 +14,7 @@ export function Mockup({ className, theme = "light" }: MockupProps) {
   return (
     <div
       className={cn(
-        "relative w-full mx-auto rounded-xl overflow-hidden border",
+        "relative w-full mx-auto rounded-xl overflow-hidden border hidden lg:block",
         isDark ? "bg-[#1a1a1a] border-gray-800" : "bg-white border-gray-200",
         className
       )}
